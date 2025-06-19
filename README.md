@@ -82,10 +82,10 @@ Make sure all dependencies (pyDESeq2, gseapy, pandas, etc.) are installed.
 
 ## Authors
 
-- Jasdeep Singh
 - Autumn Davis
-- Vivian White
+- Jasdeep Singh
 - Jed Pagcaliwagan
+- Vivian White
 
 Conducted as part of CSCI 474: Bioinformatics, Western Washington University, Fall 2024.
 
