@@ -14,6 +14,21 @@ Microglia are brain-resident immune cells. Certain ECM proteins have been shown 
 - Enrichment Analysis: GSEA via gseapy (using KEGG 2016)
 - Visualization: Bubble plots of top enriched pathways
 
+## Visual Results
+
+Here are the GSEA bubble plots for each ECM condition:
+
+### Agrin
+![Agrin GSEA](figures/Agrin_GSEA.webp)
+
+### Pan-Laminin
+![Pan-Laminin GSEA](figures/Pan-Laminin_GSEA.webp)
+
+### Laminin-211
+![Laminin-211 GSEA](figures/Laminin-211_GSEA.webp)
+
+### Collagen I
+![Collagen I GSEA](figures/CollagenI_GSEA.webp)
 ## Repository Structure
 
 ```
