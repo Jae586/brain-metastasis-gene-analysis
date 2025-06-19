@@ -1,59 +1,69 @@
-# Brain Metastasis Gene Analysis
+# Brain Metastasis Gene Expression Analysis
 
-This repository contains RNA-seq analysis code and results for studying how extracellular matrix (ECM) proteins affect microglia gene expression during brain metastasis in breast cancer. The work supports research from the Snyder Lab on cancer immunosurveillance in the brain.
+This project analyzes how extracellular matrix (ECM) proteins influence gene expression in human microglia during breast cancer brain metastasis. It performs RNA-seq preprocessing, differential gene expression analysis (DESeq2), and pathway enrichment analysis (GSEA) to identify changes in immune and metabolic signaling.
 
 ## Background
 
-Microglia are immune cells in the brain that help suppress cancer through phagocytosis. However, certain ECM proteins in the brain microenvironment may inhibit this function, allowing tumor cells to evade immune responses.
+Microglia are brain-resident immune cells. Certain ECM proteins have been shown to suppress microglial phagocytosis of tumor cells. This project investigates whether those effects correspond to specific transcriptomic changes.
 
-This project investigates transcriptional changes in microglia cultured on various ECM proteins to identify affected gene pathways.
+## Data and Tools
 
-## Objectives
+- Input: HTSeq-count outputs merged into `combined_counts.csv`
+- Gene ID Mapping: MyGene (Ensembl → HGNC symbols)
+- DEG Analysis: pyDESeq2 (Python implementation of DESeq2)
+- Enrichment Analysis: GSEA via gseapy (using KEGG 2016)
+- Visualization: Bubble plots of top enriched pathways
 
-- Analyze RNA-seq data from microglia treated with ECM proteins
-- Identify differentially expressed gene (DEG) groups
-- Use Gene Set Enrichment Analysis (GSEA) and DAVID to identify enriched pathways
-- Compare experimental groups against control coatings (PLL, Matrigel)
+## Repository Structure
 
-## Data & Tools
+```
+├── data/                       # Raw and processed input data
+│   └── combined_counts.csv
+├── scripts/                    # Python pipeline
+│   └── pipeline.py
+├── HTSeq_count_results/                    # Output GSEA summary tables
+│   └── 3L_output.csv, etc.
+├── figures/                    # Bubble plots per condition
+│   └── Agrin_GSEA.webp, etc.
+├── docs/                       # Final project report
+│   └── final_report.pdf
+├── README.md                   # This file
+```
 
-- **Input Data:** FASTQ RNA-seq files
-- **Controls:** PLL, Matrigel
-- **ECM Conditions:** Agrin, Pan-Laminin, Laminin-211, Collagen
-- **Tools Used:**
-  - `STAR` – alignment to reference genome
-  - `HTSeq-count` – generate read count matrix
-  - `DESeq2` – differential expression analysis
-  - `GSEA` – gene set enrichment analysis
-  - `DAVID` – functional annotation
+## Project Report
 
-## Workflow
+Full details on experimental motivation, data handling, and statistical results are available in `docs/final_report.pdf`.
 
-1. **Align RNA-seq data** with STAR using Ensembl reference genome
-2. **Generate read counts** using HTSeq-count
-3. **Identify DEGs** between control and ECM-treated groups using DESeq2
-4. **Rank genes** by log2 fold change
-5. **Perform enrichment analysis** with GSEA and DAVID
-6. **Visualize results** with enrichment plots and pathway reports
+## Visual Results
 
+Enrichment plots for each ECM condition show pathway-level differences in microglial gene expression. Bubble color indicates up/downregulation; size represents the proportion of genes affected.
 
-## Contributors
+- Agrin
+- Pan-Laminin
+- Laminin-211
+- Collagen I
 
-- Autumn Davis (CS Master's)
-- Jasdeep Singh (CS Undergrad)
-- Jed Pagcaliwagan (CS Undergrad)
-- Vivian White (CS Master's)
+Plots are located in the `figures/` folder.
 
-##  References
+## Reproducibility
 
-1. Gordon-Weeks & Yuzhalin (2020) – *Cancer Extracellular Matrix Proteins Regulate Tumour Immunity*
-2. Ding et al. (2019) – *Tenascin C Increases Phagocytosis Mediated by CD47 Loss of Function in Glioblastoma*
-3. Subramanian et al. (2005) – *Gene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles*
+To rerun the pipeline:
 
----
+1. Place your HTSeq-count merged matrix as `combined_counts.csv` in `data/`
+2. Run the analysis:
+   ```
+   python scripts/pipeline.py
+   ```
 
-> *This analysis was conducted for CSCI 474 Bioinformatics at Western Washington University, Fall 2024.*
+Make sure all dependencies (pyDESeq2, gseapy, pandas, etc.) are installed.
 
+## Authors
 
+- Jasdeep Singh
+- Autumn Davis
+- Vivian White
+- Jed Pagcaliwagan
+
+Conducted as part of CSCI 474: Bioinformatics, Western Washington University, Fall 2024.
 
 
