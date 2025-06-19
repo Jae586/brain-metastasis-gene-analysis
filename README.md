@@ -16,19 +16,27 @@ Microglia are brain-resident immune cells. Certain ECM proteins have been shown 
 
 ## Visual Results
 
-Here are the GSEA bubble plots for each ECM condition:
+The following plots show GSEA results for each ECM treatment. Bubble size indicates gene set coverage; color represents up/downregulation.
 
-### Agrin
-![Agrin GSEA](figures/Agrin_GSEA.webp)
+<table>
+  <tr>
+    <td><strong>Agrin</strong></td>
+    <td><strong>Pan-Laminin</strong></td>
+  </tr>
+  <tr>
+    <td><img src="figures/Agrin_GSEA.webp" width="400"/></td>
+    <td><img src="figures/Pan-Laminin_GSEA.webp" width="400"/></td>
+  </tr>
+  <tr>
+    <td><strong>Laminin-211</strong></td>
+    <td><strong>Collagen I</strong></td>
+  </tr>
+  <tr>
+    <td><img src="figures/Laminin-211_GSEA.webp" width="400"/></td>
+    <td><img src="figures/CollagenI_GSEA.webp" width="400"/></td>
+  </tr>
+</table>
 
-### Pan-Laminin
-![Pan-Laminin GSEA](figures/Pan-Laminin_GSEA.webp)
-
-### Laminin-211
-![Laminin-211 GSEA](figures/Laminin-211_GSEA.webp)
-
-### Collagen I
-![Collagen I GSEA](figures/CollagenI_GSEA.webp)
 ## Repository Structure
 
 ```
