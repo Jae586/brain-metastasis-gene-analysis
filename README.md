@@ -37,4 +37,23 @@ This project investigates transcriptional changes in microglia cultured on vario
 6. **Visualize results** with enrichment plots and pathway reports
 
 
+## Contributors
+
+- Autumn Davis (CS Master's)
+- Jasdeep Singh (CS Undergrad)
+- Jed Pagcaliwagan (CS Undergrad)
+- Vivian White (CS Master's)
+
+##  References
+
+1. Gordon-Weeks & Yuzhalin (2020) – *Cancer Extracellular Matrix Proteins Regulate Tumour Immunity*
+2. Ding et al. (2019) – *Tenascin C Increases Phagocytosis Mediated by CD47 Loss of Function in Glioblastoma*
+3. Subramanian et al. (2005) – *Gene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles*
+
+---
+
+> *This analysis was conducted for CSCI 474 Bioinformatics at Western Washington University, Fall 2024.*
+
+
+
 
